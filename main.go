@@ -11,7 +11,7 @@ func main() {
 	maxConn, _ := beego.AppConfig.Int("maxConn")
 	datasource := beego.AppConfig.String("datasource")
 	orm.RegisterDataBase("default", "mysql", datasource, maxIdle, maxConn)
-
+	fmt.println("kk")
 
 	if beego.BConfig.RunMode == "dev" {
 		orm.Debug = true
